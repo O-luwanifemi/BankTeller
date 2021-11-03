@@ -1,0 +1,15 @@
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\bin\Debug\net5.0\BankTeller.exe
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\bin\Debug\net5.0\BankTeller.deps.json
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\bin\Debug\net5.0\BankTeller.runtimeconfig.json
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\bin\Debug\net5.0\BankTeller.runtimeconfig.dev.json
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\bin\Debug\net5.0\BankTeller.dll
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\bin\Debug\net5.0\ref\BankTeller.dll
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\bin\Debug\net5.0\BankTeller.pdb
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\obj\Debug\net5.0\BankTeller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\obj\Debug\net5.0\BankTeller.AssemblyInfoInputs.cache
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\obj\Debug\net5.0\BankTeller.AssemblyInfo.cs
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\obj\Debug\net5.0\BankTeller.csproj.CoreCompileInputs.cache
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\obj\Debug\net5.0\BankTeller.dll
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\obj\Debug\net5.0\ref\BankTeller.dll
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\obj\Debug\net5.0\BankTeller.pdb
+C:\Users\support\Desktop\Projects\c#\BankTeller\BankTeller\obj\Debug\net5.0\BankTeller.genruntimeconfig.cache
