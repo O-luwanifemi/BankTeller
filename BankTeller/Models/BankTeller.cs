@@ -10,12 +10,10 @@ namespace BankTellerApp.Models
     {
         public string ShowCummulativeInterest()
         {
-            double vat;
-            string response;
-            float interestRate;
+            string output;
             double cummulativeInterest;
-            // uint[] savingDurations = { 6, 9, 12, 24, 60 };
-            uint[] savingDurations = { 0.5, 0.75, 1, 2, 5 };
+            uint[] savingDurationsInMonths = { 6, 9, 12, 24, 60 };
+            uint[] savingDurationsInYears = { 0.5, 0.75, 1, 2, 5 };
 
             Console.WriteLine("Input your account name: ");
             string accountName = Console.ReadLine();
@@ -28,6 +26,24 @@ namespace BankTellerApp.Models
 
             Console.WriteLine("Input an amount: ");
             double principal = Convert.ToDouble(Console.ReadLine());
+
+            float interestRate = SetInterestRate(accountType);
+
+            const double vat = CalculateVat(7.5, principal);
+
+            foreach (var duration in savingDurationsInYears)
+            {
+                cummulativeInterest = (principal * Math.Pow(1 + interestRate, duration)) - vat;
+                output = $"In {duration} months, you will have {cummulativeInterest} interests.";
+                Console.WriteLine(output);
+            }
+
+            return "";
+        }
+
+        private float SetInterestRate(string accountType)
+        {
+            float interestRate = 0F;
 
             switch (accountType)
             {
@@ -44,19 +60,16 @@ namespace BankTellerApp.Models
                     interestRate = 7F / 100;
                     break;
                 default:
-                    interestRate = 1F / 100;
+                    interestRate = 0;
                     break;
             }
 
-            vat = principal * (7.5 / 100);
-            foreach (var duration in savingDurations)
-            {
-                cummulativeInterest = (principal * Math.Pow(1 + interestRate, duration)) - vat;
-                response = $"In {duration} months, you will have {cummulativeInterest} interests.";
-                Console.WriteLine(response);
-            }
+            return interestRate;
+        }
 
-            return "";
+        private double CalculateVat(double vatRate, double principal)
+        {
+            return (principal * (vatRate / 100));
         }
     }
 }
