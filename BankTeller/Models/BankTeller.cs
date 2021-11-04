@@ -14,7 +14,8 @@ namespace BankTellerApp.Models
             string response;
             float interestRate;
             double cummulativeInterest;
-            uint[] savingDurations = { 6, 9, 12, 24, 60 };
+            // uint[] savingDurations = { 6, 9, 12, 24, 60 };
+            uint[] savingDurations = { 0.5, 0.75, 1, 2, 5 };
 
             Console.WriteLine("Input your account name: ");
             string accountName = Console.ReadLine();
@@ -26,31 +27,31 @@ namespace BankTellerApp.Models
             string accountType = Console.ReadLine();
 
             Console.WriteLine("Input an amount: ");
-            int principal = int.Parse(Console.ReadLine());
+            double principal = Convert.ToDouble(Console.ReadLine());
 
             switch (accountType)
             {
                 case "Saving":
-                    interestRate = 1.2F;
+                    interestRate = 2F / 100;
                     break;
                 case "Current":
-                    interestRate = 3.9F;
+                    interestRate = 3.5F / 100;
                     break;
                 case "Domiciliary":
-                    interestRate = 3.9F;
+                    interestRate = 5F / 100;
                     break;
                 case "Corporate":
-                    interestRate = 3.9F;
+                    interestRate = 7F / 100;
                     break;
                 default:
-                    interestRate = 5.5F;
+                    interestRate = 1F / 100;
                     break;
             }
 
             vat = principal * (7.5 / 100);
             foreach (var duration in savingDurations)
             {
-                cummulativeInterest = principal * (1 + (interestRate / duration));
+                cummulativeInterest = (principal * Math.Pow(1 + interestRate, duration)) - vat;
                 response = $"In {duration} months, you will have {cummulativeInterest} interests.";
                 Console.WriteLine(response);
             }
