@@ -8,6 +8,8 @@ namespace BankTellerApp.Interfaces
 {
     public interface ITellerPlanning
     {
-        public int WasteManagement(decimal waste);
+        public double ConvertMonthsToYear(double duration);
+
+        public string ShowCummulativeInterest();
     }
 }
